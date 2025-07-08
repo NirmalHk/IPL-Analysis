@@ -13,19 +13,27 @@ This project uses an IPL matches dataset in SQL format.
 # Queries used:
 
 -- Most wins for an IPL team
-select winner,count(winner) from matches
+
+select winner,count(winner) 
+from matches
 group by winner
-order by count(winner) DESC;
+order by count(winner) 
+DESC;
 
 -- Toss decisions and how successful they are
-select toss_decision,count(toss_decision) from matches
+
+select toss_decision,count(toss_decision) 
+from matches
 where winner = toss_winner
 group by toss_decision;
 
 -- Best player based on Player of the Match awards
-select player_of_match,count(player_of_match) from matches
+
+select player_of_match,count(player_of_match) 
+from matches
 group by player_of_match
-order by count(player_of_match) DESC;
+order by count(player_of_match) 
+DESC;
 
 
 # What You'll Find:
