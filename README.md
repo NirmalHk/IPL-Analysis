@@ -12,7 +12,7 @@ This project uses an IPL matches dataset in SQL format.
 
 # Queries used:
 
-# -- Most wins for an IPL team
+ -- Most wins for an IPL team
 
 select winner,count(winner) 
 from matches
@@ -20,14 +20,14 @@ group by winner
 order by count(winner) 
 DESC;
 
-# -- Toss decisions and how successful they are
+ -- Toss decisions and how successful they are
 
 select toss_decision,count(toss_decision) 
 from matches
 where winner = toss_winner
 group by toss_decision;
 
-# -- Best player based on Player of the Match awards
+ -- Best player based on Player of the Match awards
 
 select player_of_match,count(player_of_match) 
 from matches
